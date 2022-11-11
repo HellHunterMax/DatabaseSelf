@@ -24,5 +24,7 @@ public class BloggingContext : DbContext
     {
         modelBuilder.Entity<Post>()
             .ToTable("Posts", b => b.IsTemporal());
+        modelBuilder.Entity<Blog>()
+            .ToTable("Blogs", b => b.IsTemporal());
     }
 }
